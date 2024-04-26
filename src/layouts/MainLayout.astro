@@ -3,7 +3,7 @@ import {SITE_DESCRIPTION, SITE_TITLE} from '../constants'
 import Navbar from '../components/navbar.astro'
 import Footer from '../components/footer.astro'
 
-const {title = 'Articles, Stories & Tutorials for Tech People'} = Astro.props
+const {title = 'Custom Rugs for People'} = Astro.props
 
 type Props = {
   title?: string
@@ -24,9 +24,9 @@ type Props = {
     ></script>
     <title>{SITE_TITLE} - {title}</title>
   </head>
-  <body class="">
+  <body class="flex flex-col justify-between h-screen">
     <Navbar />
-    <section class="container mx-auto max-w-screen-xl mt-10 px-8">
+    <section class="container mx-auto max-w-screen-xl mt-10 px-8 ">
       <slot />
     </section>
     <Footer />
