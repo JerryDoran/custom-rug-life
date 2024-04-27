@@ -13,6 +13,7 @@ const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
 const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
 
 const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
+
 ---
 
 <MainLayout>
@@ -23,19 +24,23 @@ const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
           Beautiful <span class="text-indigo-700">Custom </span>Designs  are <span class="text-indigo-700">Underfoot</span>
         </h1>
         <h2 class="text-3xl max-md:text-2xl font-bold text-gray-700 mb-8">Why choose us?</h2>
-        <p>All Custom Rugs are made-to-order and handcrafted in just the way you want it. We are known for providing high quality area rugs at affordable prices. 
-        You name it, we can create it. From your favorite sports team to your company logo, we have it all.</p>
+        <p> We are known for providing high quality custom made rugs at affordable prices. 
+        </p>
         
         <div class="flex gap-4 pt-8 max-md:justify-center items-center">
-          <button class="bg-indigo-700 hover:bg-indigo-600  text-white font-bold py-4 px-8 rounded transition">View Rugs</button>
-          <button class="bg-indigo-700 hover:bg-indigo-600  text-white font-bold py-4 px-8 rounded transition">Contact Us</button>
+         
+          <a href="/rugs" class="bg-indigo-700 hover:bg-indigo-600  text-white font-bold py-4 px-8 rounded transition">View Rugs</a>
+          <a class="bg-indigo-700 hover:bg-indigo-600  text-white font-bold py-4 px-8 rounded transition" href="/contact">Contact</a>
         </div>
       </div>
       <Image src={heroImage} class="w-full max-lg:w-1/2 max-lg:mx-auto h-full rounded-lg order-first lg:order-last " alt="Rug Banner"  />    
     </div>
-	</MainLayout>
+  	</MainLayout>
+
  
  
   <!-- . Creating your own custom rug is only a step away. -->
   <!-- Our rugs are 100% made to order, giving designers the ability to not only tweak existing Perennials designs, but also build a new design from scratch -->
   <!-- Get in touch to find out more -->
+  <!-- All Custom Rugs are made-to-order and handcrafted in just the way you want it. -->
+  <!-- You name it, we can create it. From your favorite sports team to your company logo, we have it all. -->

@@ -5,28 +5,28 @@ import type { CollectionEntry } from 'astro:content'
 import Pagination from "../../components/pagination.astro";
 import ArticleCard from '../../components/article-card.astro'
 import SearchForm from "../../components/search-form.astro";
-import { ARTICLES_PER_PAGE } from "../../constants";
+import { RUGS_PER_PAGE } from "../../constants";
 
 const currentPage = +Astro.url.searchParams.get('page')! || 1;
 
-const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const allRugs: CollectionEntry<'rug'>[] = (await getCollection('rug'))
 
-const totalPages = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE);
+// const totalPages = Math.ceil(allRugs.length / RUGS);
 
-const articlesForPage = allBlogArticles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
+const allRugsPage = allRugs
 ---
 
 <MainLayout>
-  <h1 class="text-2xl pb-3">All Articles</h1>
+  <h1 class="text-4xl font-bold pb-3">Our Rugs</h1>
 
   <!-- <SearchForm /> -->
  
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {articlesForPage.map((article: CollectionEntry<'blog'>) => (
-      <ArticleCard article={article}/>
+    {allRugsPage.map((rug: CollectionEntry<'rug'>) => (
+      <ArticleCard rug={rug}/>
     ))}
     
 </div>
-<Pagination currentPage={currentPage} totalPages={totalPages} disablePrevious={currentPage === 1} disableNext={currentPage === totalPages} />
+<!-- <Pagination currentPage={currentPage} totalPages={totalPages} disablePrevious={currentPage === 1} disableNext={currentPage === totalPages} /> -->
  
 </MainLayout>
