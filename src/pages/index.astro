@@ -1,19 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import SearchForm from '../components/search-form.astro';
-import type { CollectionEntry } from 'astro:content'
-import {getCollection} from 'astro:content'
-import { HOME_PAGE_ARTICLE_LIMIT } from '../constants';
-import ArticleCard from '../components/article-card.astro';
-import heroImage from '../images/banner.png';
+import heroImage from '../images/rug-logo.jpg';
 import { Image } from 'astro:assets';
-
-const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
-
-const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
-
 ---
 
 <MainLayout>
