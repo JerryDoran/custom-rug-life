@@ -9,52 +9,25 @@ import team3 from '../images/team3.png';
 
 
 <MainLayout title="About TechPeople">
-  <h1 class="text-4xl font-bold mb-5"> About TechPeople</h1>
-  <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-        <Image src={about} alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg" width={800} height={600}/>
+  <div>
+    <h1 class="text-4xl lg:text-5xl font-bold mb-5"> About Custom Rug Life</h1>
+    <h2 class="text-xl italic font-extrabold text-gray-500 mb-4">Creating your own custom rug is only a step away.</h2>
+  </div>
+  <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="w-full md:w-1/2 my-4 md:mb-0">
+        <img src='../images/about.jpg' alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 ml-4">
         <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
-            Who We Are
+            What We Do
         </h2>
-        <p class="text-gray-700 leading-relaxed mb-6">
-            We are Tech People, a passionate team of tech enthusiasts dedicated to bringing you the latest news, articles, and tutorials on all things technology.
+        <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+          Our rugs are 100% made to order, giving us the ability to not only tweak existing designs, but also build a new design from scratch.
         </p>
-        <p class="text-gray-700 leading-relaxed mb-6">
-            Our mission is to empower and educate our readers, helping them stay up-to-date with the rapidly evolving world of technology. Whether you're a seasoned developer, a gadget enthusiast, or just curious about the latest tech trends, we've got you covered.
+        <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+          All Custom Rugs are made-to-order and handcrafted in just the way you want it. You name it, we can create it. From your favorite sports team to your company logo, we have it all. Get in touch to find out more.
         </p>
        
     </div>
-</div>
-
-<!-- Team -->
-<div class="mt-10">
-  <h2 class="text-3xl font-extrabold text-gray-900 mb-8">
-    Our Team
-  </h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <Image src={team1} alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg" width={800} height={600}/>
-        <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
-            <p class="text-gray-70">Founder & Editor-in-Chief</p>
-        </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <Image src={team2} alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg" width={800} height={600}/>
-        <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Paul Newman</h3>
-            <p class="text-gray-70">Lead Writer</p>
-        </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <Image src={team3} alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg" width={800} height={600}/>
-        <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Johanna Johnson</h3>
-            <p class="text-gray-70">Tech Analyst</p>
-        </div>
-    </div>
-  </div>
 </div>
 </MainLayout>
